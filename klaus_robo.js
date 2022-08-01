@@ -197,7 +197,7 @@ function createCoins(client, infos, prices, cacheBlockeds) {
         });
 
       if (
-        checkIfIsRedCandle(lowCandles[lowCandles.length - 1]) &&
+        !checkIfIsRedCandle(lowCandles[lowCandles.length - 1]) &&
         verificaBaixa(symbol, lowCandles[lowCandles.length - 2].high)
       ) {
         let emaCandles = await client
